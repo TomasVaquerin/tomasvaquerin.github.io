@@ -1,0 +1,38 @@
+:root {
+    --color: #242424;
+    --background-color: #f5f5f5;
+}
+
+body {
+    margin: 60px;
+    background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+}
+
+div {
+    display: inline-grid; /* Cambia el contenedor a inline-flex para evitar ocupar todo el ancho */
+    gap: 40px; /* Espacio entre enlaces */
+}
+
+a {
+    display: inline-block; /* Asegura que el enlace solo ocupe el espacio del texto */
+    color: var(--color);
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Transición para la animación */
+}
+
+a:hover {
+    transform: scale(1.2); /* Escala sin cambiar el flujo de los elementos */
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--background-color);
+        background-color: var(--color);
+    }
+
+    a {
+        color: var(--background-color);
+    }
+}
